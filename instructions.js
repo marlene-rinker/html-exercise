@@ -70,6 +70,7 @@ function buyBoots(){
     var quantity = prompt("How many boots do you want to buy?");
     var bootDescription;
     var cartContents = '';
+    var cartTotal = 0;
 
     while (isNaN(quantity)) {
          quantity = prompt("You must enter a number.");
@@ -77,11 +78,19 @@ function buyBoots(){
 
     for (var i = 0; i < quantity; i++) {
         bootDescription = "Boot #"+[i+1];
-        cartContents = cartContents + " | " + bootDescription;
+        bootPrice = Math.floor(Math.random() * 81) + 120;
+        cartTotal = cartTotal + bootPrice;
+        cartContents = cartContents + " | " + bootDescription + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + '$' + bootPrice;
         console.log(bootDescription);
         console.log(cartContents);
+        console.log(bootPrice);
+        console.log(cartTotal);
 
     };
-    return ('<h4> Boots in your cart:' + cartContents + '</h4>');
+    // return ('<h4> Boots in your cart:' + cartContents + '</h4>');
+    var yourCart = document.getElementById("cart");
+
+    yourCart.textContent += 'Your cart:' +cartContents + "|" + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + "Total: $" + cartTotal;
+    // document.write ('<h4> Boots in your cart:' + cartContents + '</h4>');
 
 }

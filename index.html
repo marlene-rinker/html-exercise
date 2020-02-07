@@ -11,6 +11,7 @@
     <!-- commented verifyInterest out because it was a fun experiment, but not a good user experience. -->
     <!-- <script>verifyInterest()</script> -->
 </head>
+<!-- <body onload="buyBoots();"> -->
 <body>
     
     <header>
@@ -39,9 +40,14 @@
             </article>
         </section>
         <!-- <article id="cart"><script>document.write(buyBoots())</script></article> -->
-        <section id="cart">
-            <script>document.write(buyBoots())</script>
-        </section>
+        <h4 id="cart">
+            <!-- <script>
+                // window.onload = function(){
+                // setTimeout(buyBoots, 5000)
+                // };
+                document.write(buyBoots())
+            </script> -->
+        </h4>
     </main>
     <footer>
         <nav>
@@ -53,4 +59,9 @@
         <!-- <script src="footer-date.js"></script> -->
     </footer>
 </body>
+    <script>
+        window.onload = function(){
+            setTimeout(buyBoots, 1000)
+        };
+    </script>
 </html>
