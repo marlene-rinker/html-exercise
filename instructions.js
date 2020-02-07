@@ -60,6 +60,28 @@ var weekdayTagline = function(){
     console.log('Weekday', weekday);
     return ('<h3>' + weekday + ' is a great day for hiking!</h3>');
     
-    
 }
 
+
+//this function asks you how many boots you want to buy, then tells you how much it will cost
+
+function buyBoots(){
+
+    var quantity = prompt("How many boots do you want to buy?");
+    var bootDescription;
+    var cartContents = '';
+
+    while (isNaN(quantity)) {
+         quantity = prompt("You must enter a number.");
+    };
+
+    for (var i = 0; i < quantity; i++) {
+        bootDescription = "Boot #"+[i+1];
+        cartContents = cartContents + " | " + bootDescription;
+        console.log(bootDescription);
+        console.log(cartContents);
+
+    };
+    return ('<h4> Boots in your cart:' + cartContents + '</h4>');
+
+}
