@@ -5,7 +5,7 @@ function yearTagline (){
     var mydate = new Date();
     mydate = mydate.getFullYear();
 
-    return ('<h5> Hope you have fun hiking in ' + mydate + ' and beyond!</h5>');
+    return ('<h5 class="big-color"> Hope you have fun hiking in ' + mydate + ' and beyond!</h5>');
 
     // just for fun - code below displays the tagline three times 
 
