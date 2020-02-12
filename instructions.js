@@ -24,7 +24,7 @@ function verifyInterest() {
     var interest = prompt ('Do you want the snowboarding page?')
     interest = interest.toLowerCase()
 
-    if (interest == 'yes') {
+    if (interest === 'yes') {
         open ('https://leethomas13.github.io/Mountain-Website/'); 
     } else {confirm ('Great! We love hiking too!');
     };
@@ -87,10 +87,12 @@ function buyBoots(){
         console.log(cartTotal);
 
     };
-    // return ('<h4> Boots in your cart:' + cartContents + '</h4>');
-    var yourCart = document.getElementById("cart");
+    return ('Your cart:' +cartContents + "|" + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + "Total: $" + cartTotal); 
+    // var yourCart = document.getElementById("cart");
 
-    yourCart.textContent += 'Your cart:' +cartContents + "|" + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + "Total: $" + cartTotal;
+    // yourCart.textContent += 'Your cart:' +cartContents + "|" + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + "Total: $" + cartTotal;
     // document.write ('<h4> Boots in your cart:' + cartContents + '</h4>');
 
 }
+    
+

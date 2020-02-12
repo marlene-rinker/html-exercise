@@ -11,7 +11,6 @@
     <!-- commented verifyInterest out because it was a fun experiment, but not a good user experience. -->
     <!-- <script>verifyInterest()</script> -->
 </head>
-<!-- <body onload="buyBoots();"> -->
 <body>
     
     <header>
@@ -60,8 +59,21 @@
     </footer>
 </body>
     <script>
+        function localBuy() {
+            var returnValue = buyBoots(); 
+            var yourCart = document.getElementById("cart");
+            yourCart.textContent = returnValue;
+        }
+
         window.onload = function(){
-            setTimeout(buyBoots, 1000)
-        };
+           setTimeout( localBuy, 1000);
+        }
     </script>
+    
+    <!-- this was used when the text was returned to the section with cart ID in the buyBoots function -->
+    <!-- <script>
+     window.onload = function(){
+      setTimeout(buyBoots, 1000)
+      };
+    </script>  -->
 </html>
