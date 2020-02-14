@@ -6,8 +6,14 @@ body {
     float: left;
 }
 
-.menu ul li a {
+nav a {
     text-decoration: none;
+}
+
+nav uL {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 #cart {
