@@ -6,14 +6,32 @@ body {
     float: left;
 }
 
-nav a {
+.active {
+    background-color: #4CAF50;
+  }
+
+nav li a {
     text-decoration: none;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+nav li a:hover:not(.active) {
+    background-color: #111;
 }
 
 nav uL {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
 }
 
 #cart {
@@ -69,5 +87,6 @@ footer {
     position:relative;
     bottom:0px;
     width: 100%;
+    padding-top: 5px;
     
 }
