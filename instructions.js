@@ -15,6 +15,13 @@ function yearTagline (){
 
 }
 
+function copyrightLine (){
+    var mydate = new Date();
+    mydate = mydate.getFullYear();
+
+    return ('<p class="small"> &copy; ' + mydate + ' Outdoor Resources JFF, Inc. </p>');
+}
+
 
 
 // this function allows you to switch to the snowboarding site if you want to go there instead

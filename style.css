@@ -6,6 +6,10 @@ body {
     float: left;
 }
 
+.small {
+    font-size: x-small;
+}
+
 .active {
     background-color: #4CAF50;
   }
