@@ -72,7 +72,7 @@ var weekdayTagline = function(){
 
 //this function asks you how many boots you want to buy, then tells you how much it will cost
 
-function buyBoots(){
+function buyBoots(location){
 
     var quantity = prompt("How many boots do you want to buy?");
     var bootDescription;
@@ -94,10 +94,10 @@ function buyBoots(){
         console.log(cartTotal);
 
     };
-    return ('Your cart:' +cartContents + "|" + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + "Total: $" + cartTotal); 
-    // var yourCart = document.getElementById("cart");
+    // return ('Your cart:' +cartContents + "|" + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + "Total: $" + cartTotal); 
+    var yourCart = document.getElementById(location);
 
-    // yourCart.textContent += 'Your cart:' +cartContents + "|" + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + "Total: $" + cartTotal;
+    yourCart.textContent += 'Your cart:' +cartContents + "|" + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + "Total: $" + cartTotal;
     // document.write ('<h4> Boots in your cart:' + cartContents + '</h4>');
 
 }

@@ -40,7 +40,7 @@
         </section>
         <!-- <article id="cart"><script>document.write(buyBoots())</script></article> -->
         <section>
-            <button type="button">Buy Boots
+            <button type="button" onclick="buyBoots('cart')">Buy Boots
                 <img class ="icon" src="images/Construction.jpg" alt="Under Construction">
             </button>
             <!-- <img class ="icon" src="images/Construction.jpg" alt="Under Construction"> -->
@@ -67,17 +67,18 @@
         <!-- <script src="footer-date.js"></script> -->
     </footer>
 </body>
-    <script>
+    <!-- This script was used to populate the cart before the button was added and the buyBoots function was modified. -->
+    <!-- <script>
         function localBuy() {
             var returnValue = buyBoots(); 
             var yourCart = document.getElementById("cart");
             yourCart.textContent = returnValue;
         }
-
-        window.onload = function(){
-           setTimeout( localBuy, 1000);
-        }
-    </script>
+        // delayed prompt until after the page loaded - before adding the buy boots button
+        // window.onload = function(){
+        //    setTimeout( localBuy, 1000);
+        // }
+    </script> -->
     
     <!-- this was used when the text was returned to the section with cart ID in the buyBoots function -->
     <!-- <script>
