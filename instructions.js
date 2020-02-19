@@ -1,11 +1,11 @@
 // these are functions to use on the hiking website 
 
 // this function is for the tagline with the year
-function yearTagline (){
+function yearTagline (activity){
     var mydate = new Date();
     mydate = mydate.getFullYear();
 
-    return ('<h5 class="big-color"> Hope you have fun hiking in ' + mydate + ' and beyond!</h5>');
+    return ('<h5 class="big-color"> Hope you have fun ' + activity + ' in ' + mydate + ' and beyond!</h5>');
 
     // just for fun - code below displays the tagline three times 
 
@@ -42,7 +42,7 @@ function verifyInterest() {
 // this function puts the day of the week in the header with a phrase
 // this creates a tagline that includes the day of the week
 
-var weekdayTagline = function(){
+var weekdayTagline = function(activity){
     var today = new Date();
     var dayNow = today.getDay();
     var weekday;
@@ -65,7 +65,7 @@ var weekdayTagline = function(){
         weekday = 'Today';
     };
     console.log('Weekday', weekday);
-    return ('<h3>' + weekday + ' is a great day for hiking!</h3>');
+    return ('<h3>' + weekday + ' is a great day for ' + activity + '!</h3>');
     
 }
 
@@ -97,7 +97,7 @@ function buyBoots(location){
     // return ('Your cart:' +cartContents + "|" + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + "Total: $" + cartTotal); 
     var yourCart = document.getElementById(location);
 
-    yourCart.textContent += 'Your cart:' +cartContents + "|" + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + "Total: $" + cartTotal;
+    yourCart.textContent = 'Your cart:' +cartContents + "|" + '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0' + "Total: $" + cartTotal;
     // document.write ('<h4> Boots in your cart:' + cartContents + '</h4>');
 
 }

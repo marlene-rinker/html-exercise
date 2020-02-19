@@ -11,12 +11,16 @@
     
 </head>
     <body>
+        <script> 
+            var pageActivity = 'being outside';
+        </script>
+
         <header>
             <img id="logo" src="images/hiking_logo.jpg" alt="logo">
-            <h1>Hiking Resources</h1>
-            <h2>Find the best hiking boots</h2>
+            <h1>Outdoor Resources JFF</h1>
+            <h2>Find the best outdoor gear</h2>
             <!-- <script src="greeting.js"></script> -->
-            <script>document.write(weekdayTagline())</script>
+            <script>document.write(weekdayTagline(pageActivity))</script>
         </header>
         <main>
             <section>
@@ -32,7 +36,7 @@
                     <li><a class="active" href="https://marlene-rinker.github.io/html-exercise/contact.html"> Contact Us</a></li>
                 </ul>
             </nav>
-            <script>document.write(yearTagline())</script>
+            <script>document.write(yearTagline(pageActivity))</script>
             <script>document.write(copyrightLine())</script>
             <!-- <script src="footer-date.js"></script> -->
         </footer>
